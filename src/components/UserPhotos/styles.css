@@ -1,0 +1,57 @@
+/* === Tổng layout === */
+.user-photo-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 100%; /* Giới hạn chiều cao để kích hoạt cuộn */
+  height: calc(100vh - 85px);
+  overflow-y: auto; /* Cho phép cuộn theo chiều dọc khi nội dung vượt quá */
+}
+
+/* === Ảnh của người dùng === */
+.user-photo-container img {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === Phần chứa comment === */
+.comment-box {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.comment-box:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === Tên người bình luận === */
+.comment-box a {
+  color: #1976d2;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.comment-box a:hover {
+  text-decoration: underline;
+}
+
+/* === Ngày giờ comment === */
+.comment-date {
+  font-size: 0.8em;
+  color: #777;
+  margin-top: 4px;
+  display: block;
+}
+
+/* === Khi không có comment === */
+.no-comment {
+  color: #999;
+  font-style: italic;
+  margin-top: 5px;
+}
+
